@@ -1,0 +1,17 @@
+.field-name-field-bilder .flex-nav-container {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.field-name-field-bilder .flex-nav-container .flexslider {
+  border-width: 1px;
+  border-color: black;
+  border-radius: 0;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+.field-name-field-bilder .flex-control-nav {
+  position: static;
+}
