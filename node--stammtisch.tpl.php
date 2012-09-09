@@ -14,28 +14,24 @@
     ?>
 
     <?php
-      print render($content['field_ort']);
+      if ($content['field_ort'])
+        print render($content['field_ort']) . '<br />';
     ?>
-
-    <br />
 
     <?php
-      print render($content['field_turnus']);
+      if ($content['field_turnus'])
+        print render($content['field_turnus']) . '<br />';
     ?>
-
-    <br />
 
     <?php
-      print render($content['field_datum']);
+      if ($content['field_datum'])
+        print render($content['field_datum']) . '<br />';
     ?>
-
-    <br />
 
     <?php
-      print render($content['field_wiki_url']);
+      if ($content['field_wiki_url'])
+        print render($content['field_wiki_url']) . '<br />';
     ?>
-
-    <br />
 
     <div style="clear: both;"></div>
 
