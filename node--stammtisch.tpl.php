@@ -10,37 +10,18 @@
 
   <div class="post-entry"<?php print $content_attributes; ?>>
     <?php
-      print render($content['field_bilder']);
-    ?>
-
-    <?php
-      if ($content['field_ort'])
-        print render($content['field_ort']) . '<br />';
-    ?>
-
-    <?php
-      if ($content['field_turnus'])
-        print render($content['field_turnus']) . '<br />';
-    ?>
-
-    <?php
-      if ($content['field_datum'])
-        print render($content['field_datum']) . '<br />';
-    ?>
-
-    <?php
-      if ($content['field_wiki_url'])
-        print render($content['field_wiki_url']) . '<br />';
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_ort_url']);
+      hide($content['field_geo']);
+      print render($content);
     ?>
 
     <div style="clear: both;"></div>
 
     <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      hide($content['field_ort_url']);
-      print render($content);
+      if ($content['field_geo'])
+        print render($content['field_geo']);
     ?>
   </div>
 
