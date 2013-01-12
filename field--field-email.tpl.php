@@ -40,36 +40,25 @@
  *
  * @see template_preprocess_field()
  * @see theme_field()
+ *
+ * @ingroup themeable
  */
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  <?php $pgp = field_get_items('node', $element['#object'], 'field_pgp'); ?>
+
   <?php if (!$label_hidden): ?>
     <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
   <?php endif; ?>
+  <div class="field-items"<?php print $content_attributes; ?>>
+    <?php if(isset($items[0])): ?>
+      <div class="field-item">
+        <?php print render($items[0]); ?>
 
-  <?php
-    if (isset($items[0])):
-      $address = $items[0]['#address'];
-
-      if (!empty($address['organisation_name'])) {
-        $items_ort_url = field_get_items('node', $element['#object'], 'field_ort_url');
-
-        if (isset($items_ort_url[0]))
-          print '<a href="' . $items_ort_url[0]['display_url'] . '">';
-
-        print $address['organisation_name'];
-
-        if (isset($items_ort_url[0]))
-          print '</a>';
-
-        print '<br />';
-      }
-      if (!empty($address['thoroughfare']))
-        print $address['thoroughfare'] . '<br />';
-      if (!empty($address['premise']))
-        print $address['premise'] . '<br />';
-      if (!empty($address['postal_code']) && !empty($address['locality']))
-        print $address['postal_code'] . ' ' . $address['locality'];
-    endif;
-  ?>
+        <?php if (isset($pgp[0])): ?>
+          (<a href="http://pool.sks-keyservers.net:11371/pks/lookup?op=get&search=<?php print $pgp[0]['safe_value']; ?>"><?php print $pgp[0]['safe_value']; ?></a>)
+        <?php endif; ?>
+      </div>
+    <?php endif; ?>
+  </div>
 </div>

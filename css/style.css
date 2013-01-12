@@ -19,3 +19,96 @@
 .node-stammtisch .field {
   margin-bottom: 10px;
 }
+
+.node-person .field-name-field-bild {
+  float: left;
+  margin: 0 10px 5px 0;
+}
+
+.node-person .field {
+  margin-bottom: 10px;
+}
+
+.node-beschluss .field-name-field-status {
+  float: right;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+.node-beschluss .field-name-field-status img {
+  margin: 5px;
+}
+
+.node-beschluss .field {
+  margin-bottom: 10px;
+}
+
+.view-beschl-sse .views-row {
+  margin-bottom: 10px;
+}
+
+.node-vorstandssitzung .field {
+  margin-bottom: 10px;
+}
+
+.node-vorstandssitzung .field-name-field-aufzeichnung {
+  margin-top: 20px;
+}
+
+#main-content .content-aside .block-views ul,
+#main-content .content-aside .block-aggregator ul {
+  margin: 0;
+}
+
+#main-content .content-aside .block-views li,
+#main-content .content-aside .block-aggregator li {
+  background-color: #EEEEEE;
+  margin: 1px 0;
+  padding: 5px;
+}
+
+#main-content .content-aside div.feed-icon,
+#main-content .content-aside div.feed-icon {
+  position: relative;
+  top: -19px;
+  width: 34px;
+}
+
+.content-aside .daymonth {
+  background-color: #CACACA;
+  vertical-align: middle;
+  width: 40px;
+}
+
+td.daymonth .day,
+td.daymonth .month {
+  display: block;
+  text-align: center;
+}
+
+td.daymonth .day {
+  font-family: "BebasNeueRegular",Helvetica,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 18px;
+}
+
+td.daymonth .month {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+#main-content .content-aside .view-display-id-block_3 table {
+  margin-bottom: 2px;
+}
+
+.header {
+  background-image: url("../images/headerbackground.png");
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+}
+
+.header .branding {
+  padding-top: 35px;
+  padding-left: 50px;
+}

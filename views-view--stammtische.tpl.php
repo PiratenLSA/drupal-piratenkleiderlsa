@@ -51,7 +51,7 @@
     </div>
   <?php endif; ?>
 
-  <div style="float: right; width: 400px">
+  <div style="float: right; width: 450px">
   <?php
     $view = views_get_view('stammtischkarte');
     print $view->execute_display('default');
